@@ -12,7 +12,7 @@ git clone https://github.com/your-username/your-repository.git
 cd your-repository
 
 # Установка зависимостей
-npm install
+npm install or npm i
 
 ```
 
