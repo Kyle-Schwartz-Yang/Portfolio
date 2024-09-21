@@ -1,0 +1,152 @@
+//$ RAINBOW TEXT
+//Шаблон    @extend %rainbowTxt;
+%rainbowTxt {
+  @supports((background-clip: text) and (-webkit-text-fill-color: transparent)) {
+    background: linear-gradient(87.01deg, #6d9be3 3.39%, #aadfc1 32.8%, #f4cd63 61.74%, #eb672d 94.48%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+//$ Title Animation
+//Шаблон    @include %titleAnimation;
+@mixin titleAnimation {
+
+  @media (max-width: 1400px) {
+    font-size: 4.5vw;
+  }
+
+  overflow: hidden;
+  width: 32ch;
+  font-size: 60px;
+  font-weight: 800;
+  color: $color-accent;
+  font-family: monospace;
+  text-transform: uppercase;
+  white-space: nowrap;
+  border-right: 4px solid $color-accent;
+  animation: printed-text 5s steps(40),
+  flashin-border .75s step-start infinite;
+
+  @keyframes flashin-border {
+    0% {
+      border-color: orange;
+    }
+
+    50% {
+      border-color: transparent;
+    }
+
+    100% {
+      border-color: orange;
+    }
+  }
+
+  @keyframes printed-text {
+    from {
+      width: 0%;
+    }
+  }
+
+}
+
+//$ FLEXBOX
+//Миксин ! @include flexbox($justify, $alignitems);
+@mixin flexbox($justify, $alignitems) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $alignitems;
+}
+
+// //$waves (START)
+//  @include rainbowButton;
+@mixin rainbowButton {
+  overflow: hidden;
+  width: 220px;
+  min-height: 60px;
+  border: 3px solid $color-accent;
+  border-radius: 10%;
+  position: relative;
+  transition: all 0.8s ease 0s;
+
+  &:hover .rainbowButton__waves {
+    top: -100%;
+  }
+
+  .rainbowButton__text {
+    font-size: 28px;
+    font-weight: 600;
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+  }
+
+  .rainbowButton__waves {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 280px;
+    height: 280px;
+    background: linear-gradient(87.01deg, #6d9be3 3.39%, #aadfc1 32.8%, #f4cd63 61.74%, #eb672d 94.48%);
+    transition: all 2s ease 0s;
+
+    &::after,
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 66%;
+      width: 250%;
+      height: 250%;
+      transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+    }
+
+    &::before {
+      background-color: #252424;
+      border-radius: 48%;
+      animation: waves 5s infinite linear;
+    }
+
+    &::after {
+      background-color: rgba(0, 0, 0, 0.5);
+      border-radius: 44%;
+      animation: rainbowButtonAnimation 10s infinite linear;
+    }
+  }
+
+  @keyframes rainbowButtonAnimation {
+    0% {
+      transform: translate3d(-50%, -96%, 0) rotate(0deg) scale(1);
+    }
+
+    100% {
+      transform: translate3d(-50%, -96%, 0) rotate(360deg) scale(1);
+    }
+  }
+}
+
+
+//$Background
+// @include background(url(@img/picture.jpg), #522525, no-repeat, cover, center);
+@mixin background($image, $color: null, $repeat: null, $size: null, $position: null) {
+  background-image: $image;
+
+  @if $color !=null {
+    background-color: $color;
+  }
+
+  @if $repeat !=null {
+    background-repeat: $repeat;
+  }
+
+  @if $size !=null {
+    background-size: $size;
+  }
+
+  @if $position !=null {
+    background-position: $position;
+  }
+}
