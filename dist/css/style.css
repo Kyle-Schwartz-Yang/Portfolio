@@ -1080,10 +1080,6 @@ body {
   transition: all 0.3s ease;
 }
 
-body {
-  border: 10px solid red;
-}
-
 @media (max-width: 1400px) {
   .message__title {
     font-size: 4.5vw;
