@@ -1,1 +1,3 @@
 *\n!dist\n!dist/**
+node_modules
+*.sh
