@@ -1,0 +1,52 @@
+body {
+  background: $color-body;
+  color: white;
+  font-family: $font;
+  font-size: $fsize-default;
+  position: relative;
+}
+
+
+.wrapper {
+  min-height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  flex: 1 1 auto;
+}
+
+[class*="__container"] {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0px 20px;
+
+}
+
+.rainbowTxt {
+  @extend %rainbowTxt;
+}
+
+.rainbowButton {
+  @include rainbowButton;
+}
+
+
+
+.antiqueBrass {
+  color: $color-AntiqueBrass;
+}
+
+.mauvelous {
+  color: $color-Mauvelous;
+}
+
+.chenin {
+  color: $color-Chenin;
+}
+
+.havelockBlue {
+  color: $color-HavelockBlue;
+}

@@ -1,0 +1,117 @@
+.footer {
+  @media (max-width: 576px) {
+    padding: 25px 0px;
+  }
+
+  padding: 50px 0px;
+  background-color: rgba(22, 25, 27, 0.8);
+
+
+  // .footer__container
+  &__container {
+
+    @media (max-width: 576px) {
+      flex-direction: column-reverse;
+      gap: 20px;
+    }
+
+    @include flexbox(space-between, center);
+    flex-direction: row-reverse;
+  }
+
+  // .footer__logo
+
+  &__logo {}
+
+  // .footer__txt
+
+  &__txt {
+    cursor: pointer;
+    padding: 20px;
+    text-transform: uppercase;
+    transition: all .66s ease;
+    border: 1px solid transparent;
+
+    &:hover {
+      border-left: 1px solid #fff;
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000;
+      border-top: 1px solid #fff;
+      @extend %rainbowTxt;
+      transition: border-bottom .3s ease-in-out 0s, border-left .3s ease-in-out .3s, border-top .3s ease-in-out .6s, border-right .3s ease-in-out .9s, ;
+    }
+  }
+
+  // .footer__contacts
+
+  &__contacts {}
+}
+
+.rainbowButton {
+
+  // .rainbowButton__text
+
+  &__text {}
+
+  // .rainbowButton__waves
+
+  &__waves {}
+}
+
+.contacts {
+
+  // .contacts__list
+  &__list {
+    @include flexbox(center, center);
+  }
+
+  // .contacts__item
+  &__item {
+    &:not(:last-child) {
+      margin: 0px 20px 0px 0px;
+    }
+  }
+
+  &__svg {
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    transition: all .3s ease;
+  }
+
+  &__github {
+    transition: all .3s ease;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.3);
+      transition: all .3s ease;
+    }
+  }
+
+  &__tg {
+    border: 1px solid #fff;
+    background: #fff;
+    stroke: transparent;
+    transform: scale(1);
+    transition: all .3s ease;
+
+    &:hover {
+      transform: scale(1.3);
+      transition: all .3s ease;
+    }
+  }
+
+
+  &__google {
+    transition: all .3s ease;
+    transform: scale(1);
+
+    &:hover {
+      transform: scale(1.3);
+      transition: all .3s ease;
+    }
+  }
+
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+@@include('html/head.html', {
+"title":"Главная"
+})
+
+<body>
+
+  <div class="wrapper">
+    @@include('html/header.html', {})
+
+
+    <main class="main">
+      <!-- $BOX START -->
+
+
+      <section class="message" id="about">
+
+        <div class="message__container">
+
+          <div class="message__about about">
+            <h1 class="message__title">Actions speak louder than words </h1>
+
+            <div class="about__body">
+              <div class="about__cross-left-top"></div>
+              <div class="about__cross-right-top"></div>
+              <div class="about__cross-left-bottom"></div>
+              <div class="about__cross-right-bottom"></div>
+              <!-- $wind -->
+
+              <div class="about__item active">
+                <h3 class="about__title about__title-html">html</h3>
+                <div class="about__content about__content-html">
+                  <p>Basics of HTML, <span>Forms and Input Handling</span>, Tables,<span> Multimedia</span>,
+                    Semantic Markup,Audiovisual Elements, <span>Working with Metadata</span>,
+                    <span>Integration with CSS and JavaScript,</span> Overview of Modern HTML Features,
+                    <span>Overview</span> of Modern HTML Features, <span>Optimization and SEO</span>
+
+                  </p>
+
+                </div>
+              </div>
+
+              <div class="about__item">
+                <h3 class="about__title about__title-css">css</h3>
+                <div class="about__content about__content-css">
+                  <p> Element Style: <span>opacity, visibility, background, border</span>, Position: <span>display,
+                      flex,
+                      grid,
+                      margin, padding</span>,
+                    Text style: <span>font-family, text-decoration, font-style, text-overflow, word-break,
+                      color</span>,
+                    CSS Advanced - <span>SCSS/LESS, mixins, css frameworks,</span> animation.
+                  </p>
+                </div>
+              </div>
+
+              <div class="about__item">
+                <h3 class="about__title about__title-js">JScript</h3>
+
+                <div class="about__content about__content-js">
+                  <p>Data types, <span>Variables</span>, Function, <span>Object, Array</span>,
+                    Variable scopes, hosting, <span>data structures (JSON)</span>, SetTimeout/SetInterval,
+                    <span>Event Loop</span>, Promises, Array methods,
+                    <span>Work with DOM</span> Vue, React, Angular<span>Js Framerwork</span>
+                  </p>
+                </div>
+
+              </div>
+
+              <div class="about__item">
+                <h3 class="about__title about__title-about">About me</h3>
+                <div class="about__content about__content-about">
+                  <p>
+                    <span class="havelockBlue">Hello, my name is Harry!</span> <br>
+                    <span>I want to say</span> <br>
+                    <span class="antiqueBrass">Do </span> <span class="mauvelous">what you</span> <span
+                      class=" chenin">love.</span>
+                  </p>
+
+
+                </div>
+              </div>
+
+
+            </div>
+
+
+
+
+          </div>
+
+
+        </div>
+      </section>
+
+
+
+      <!-- $BOX END -->
+
+      <section class="projects" id="projects">
+
+        <div class="projects__gallery gallery swiper">
+
+          <div class="swiper-pagination gallery-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+
+          <div class="gallery__body swiper-wrapper">
+
+            <div class="gallery__item  swiper-slide">
+              <a href="https://swiperjs.com/demos#effect-fade" target="_blank">
+                <img src="@img/Adigo.png" alt="Adigo">
+                <div class="gallery__signal">
+                  <div class="gallery__content">
+                    <div class="gallery__icon">
+                      <span>
+                        <img src="@img/link.svg" alt="link-ico">
+                      </span>
+
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+
+            <div class="gallery__item swiper-slide">
+              <a href="https://swiperjs.com/demos#effect-fade" target="_blank">
+                <img src="@img/freedom.png" alt="Adigo">
+                <div class="gallery__signal">
+                  <div class="gallery__content">
+                    <div class="gallery__icon">
+                      <span>
+                        <img src="@img/link.svg" alt="link-ico">
+                      </span>
+
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="gallery__item swiper-slide">
+              <a href="https://swiperjs.com/demos#effect-fade" target="_blank">
+                <img src="@img/freedom.png" alt="Adigo">
+                <div class="gallery__signal">
+                  <div class="gallery__content">
+                    <div class="gallery__icon">
+                      <span>
+                        <img src="@img/link.svg" alt="link-ico">
+                      </span>
+
+                    </div>
+
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div class="gallery__item swiper-slide">
+              <p class="gallery__txt">What do you think about it?</p>
+              <div class="gallery__signal signalOff">
+
+              </div>
+            </div>
+
+            <div class="gallery__item swiper-slide">
+              <p class="gallery__txt">What do you think about it?</p>
+              <div class="gallery__signal signalOff">
+
+              </div>
+            </div>
+
+          </div>
+
+
+
+
+        </div>
+
+      </section>
+
+    </main>
+
+
+    @@include('html/footer.html', {})
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+  <script src="js/app.min.js"></script>
+</body>
+
+</html>
