@@ -1,69 +1,36 @@
 .footer {
-  @media (max-width: 576px) {
-    padding: 25px 0px;
-  }
 
   padding: 50px 0px;
   background-color: rgba(22, 25, 27, 0.8);
 
+  @media (max-width: 576px) {
+    padding: 25px 0px;
+  }
 
   // .footer__container
   &__container {
+    @include flexbox(space-between, center);
 
     @media (max-width: 576px) {
       flex-direction: column-reverse;
       gap: 20px;
     }
 
-    @include flexbox(space-between, center);
-    flex-direction: row-reverse;
-  }
-
-  // .footer__logo
-
-  &__logo {}
-
-  // .footer__txt
-
-  &__txt {
-    cursor: pointer;
-    padding: 20px;
-    text-transform: uppercase;
-    transition: all .66s ease;
-    border: 1px solid transparent;
-
-    &:hover {
-      border-left: 1px solid #fff;
-      border-bottom: 1px solid #000;
-      border-right: 1px solid #000;
-      border-top: 1px solid #fff;
-      @extend %rainbowTxt;
-      transition: border-bottom .3s ease-in-out 0s, border-left .3s ease-in-out .3s, border-top .3s ease-in-out .6s, border-right .3s ease-in-out .9s, ;
-    }
   }
 
   // .footer__contacts
-
   &__contacts {}
-}
 
-.rainbowButton {
 
-  // .rainbowButton__text
-
-  &__text {}
-
-  // .rainbowButton__waves
-
-  &__waves {}
+  &__logo {
+    @media (max-width: 576px) {
+      display: none;
+    }
+  }
 }
 
 .contacts {
-
-  // .contacts__list
-  &__list {
-    @include flexbox(center, center);
-  }
+  @include flexbox(center, center);
 
   // .contacts__item
   &__item {
@@ -114,4 +81,117 @@
     }
   }
 
+}
+
+// ------------------------------------------------------------
+
+//#messager 
+.messager {
+  position: relative;
+  padding: 15px 30px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  border-radius: 8px;
+  letter-spacing: 3px;
+  overflow: hidden;
+  transition: .33s;
+
+  &__txt-bot,
+  &__txt-top {
+    cursor: pointer;
+    // text-align: center;
+    text-transform: uppercase;
+    transition: .66s;
+    padding: 5px;
+  }
+
+  &__txt-bot {
+    @extend %rainbowTxt;
+    font-weight: 900
+  }
+
+  //# messager__line
+  &__line {
+    position: absolute;
+    display: block;
+
+    &--top {
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(90deg, transparent, #eb672d);
+    }
+
+    &--bottom {
+      bottom: 0;
+      right: -100%;
+      width: 100%;
+      height: 2px;
+      background: linear-gradient(270deg, transparent, #eb672d);
+    }
+
+    &--left {
+      left: 0;
+      bottom: -100%;
+      width: 2px;
+      height: 100%;
+      background: linear-gradient(0deg, transparent, #eb672d);
+    }
+
+
+
+    &--right {
+      right: 0;
+      top: -100%;
+      width: 3px;
+      height: 100%;
+      background: linear-gradient(180deg, transparent, #eb672d);
+    }
+  }
+
+}
+
+//# messager:hover 
+.messager {
+
+  &:hover .messager__txt-top {
+    transform: translateY(100%);
+    transition: .33s;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.5),
+      20px 20px 30px rgba(0, 0, 0, 0.3);
+  }
+
+  &:hover .messager__txt-bot {
+    transform: translateY(-100%);
+    transition: .33s;
+  }
+
+  // ------------------------------------
+  &:hover .messager__line--top {
+    left: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  &:hover .messager__line--bottom {
+    right: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  &:hover .messager__line--left {
+    bottom: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  &:hover .messager__line--right {
+    top: 100%;
+    transition: 1s;
+    transition-delay: 0.25s;
+  }
+
+  // ------------------------------------
 }
