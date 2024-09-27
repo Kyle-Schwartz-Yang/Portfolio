@@ -1,5 +1,4 @@
 TARGET.md
-README.txt
 node_modules/
 dist/
-update.sh
+*.sh
