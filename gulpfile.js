@@ -71,7 +71,8 @@ const createZip = gulp.series(cmdReset, mainTasks, zipCMD); //Создание z
 
 //$Выполняем сценарий по умолчанию (START)
 //! (START)
-gulp.task('default', developer);  //or gulp.task('anyName', dev);
+gulp.task('default', developer);  
+//Создать новую задачу:  gulp.task('fonts', cmdFonts);
 //! (END)
 //$Выполняем сценарий по умолчанию (END)
 

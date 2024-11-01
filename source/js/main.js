@@ -6,7 +6,7 @@ const aboutElement = document.querySelectorAll('.about__item');
 aboutElement[0].classList.add('active');
 
 aboutElement.forEach(function (item) {
-  item.addEventListener('click', function (e) {
+  item.addEventListener('click', function () {
 
     if (!item.classList.contains('active')) {
       aboutElement.forEach(function (item) {
@@ -28,7 +28,7 @@ setTimeout(() => {
 
 //!Добвить класс к хедеру
 const header = document.querySelector('.header');
-window.document.addEventListener('scroll', function (e) {
+window.document.addEventListener('scroll', function () {
   let scrollPos = window.scrollY;
   if (scrollPos > 50) {
     header.classList.add('head-skin');
