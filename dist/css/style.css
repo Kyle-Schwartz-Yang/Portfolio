@@ -699,8 +699,8 @@ body {
   min-height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: left;
-     object-position: left;
+  -o-object-position: center;
+     object-position: center;
 }
 
 .gallery__signal {
@@ -1307,7 +1307,7 @@ body {
 
 @media (max-width: 575px) {
   .message__container {
-    padding: 0px 0px;
+    padding: 0px;
   }
 
   .about {
