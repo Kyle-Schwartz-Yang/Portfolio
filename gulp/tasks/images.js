@@ -9,7 +9,7 @@ import tinypng from "gulp-tinypng-compress"; //Cжатие изображени�
 //$Функция (START)
 // экспорт image в dist + настройка.
 export const cmdImages = () => {
-  return app.gulp.src(app.path.src.images)
+  return app.gulp.src([app.path.src.images, '!source/img/**/*.gif'])
     //*Плагин plumber + notify (START)
     .pipe(app.plugins.plumber( //Настрока сообщения об ошибке
       app.plugins.notify.onError({
