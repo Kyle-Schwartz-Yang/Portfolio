@@ -287,8 +287,8 @@ body {
 }
 
 .message {
-  background-image: -o-radial-gradient(69.44% -79.86%, 837.78% 378.29%, rgba(31, 35, 39, 0.2) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0.2) 100%), url("../img/bg3.jpg");
-  background-image: radial-gradient(837.78% 378.29% at 69.44% -79.86%, rgba(31, 35, 39, 0.2) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0.2) 100%), url("../img/bg3.jpg");
+  background-image: -o-radial-gradient(69.44% -79.86%, 837.78% 378.29%, rgba(31, 35, 39, 0.2) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0.2) 100%), url("../img/bg.webp");
+  background-image: radial-gradient(837.78% 378.29% at 69.44% -79.86%, rgba(31, 35, 39, 0.2) 0%, #191C1F 47.89%, rgba(31, 35, 39, 0.2) 100%), url("../img/bg.webp");
   background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
