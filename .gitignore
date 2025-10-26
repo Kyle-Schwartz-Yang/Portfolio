@@ -1,4 +1,2 @@
-TARGET.md
 node_modules/
 dist/
-*.sh
